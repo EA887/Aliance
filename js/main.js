@@ -37,7 +37,6 @@ mMenuToggle.addEventListener("click", (event) => {
 });
 const headerSlider = new Swiper('.header-slider-wrapper .swiper', {
   speed: 400,
-  autoHeight: true,
   slidesPerView: 1,
   navigation: {
     nextEl: '.header-slider-wrapper .slider-button-next',

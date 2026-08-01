@@ -192,8 +192,8 @@ body {
 
 .header-features {
   display: flex;
-  min-height: 11.375rem;
-  padding: .0625rem .125rem;
+  align-items: stretch;
+  padding: 0;
   margin-top: 6.625rem;
   list-style: none;
   color: #fff;
@@ -202,7 +202,7 @@ body {
 
 .header-features-item {
   padding: 1.75rem 3.625rem;
-  min-height: 100%;
+  height: auto;
   width: 18rem;
   border: 1px solid rgba(235, 235, 240, 0.2);
 }
