@@ -98,11 +98,19 @@ body {
 
 .header-nav {
   display: flex;
-  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  height: 100%;
   list-style: none;
   padding: 0;
   padding-left: 3.125rem;
   margin: 0;
+}
+
+.header-nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .header-nav-item:not(:last-child) {
@@ -110,11 +118,33 @@ body {
 }
 
 .header-nav-link {
+  display: flex;
+  height: 100%;
+  align-items: center;
   text-decoration: none;
   font-size: 1rem;
   margin-right: 3.125rem;
   color: inherit;
   letter-spacing: .0125rem;
+  position: relative;
+}
+
+.header-nav-link::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: -1px;
+  background-color: #5c8ee5;
+  transition: width 0.2s;
+  right: 0;
+  left: auto;
+}
+
+.header-nav-link:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
 
 .header-phone {
@@ -247,7 +277,7 @@ body {
 .section-title {
   font-family: "Bebas Neue";
   font-size: 3.75rem;
-  line-height: 120%;
+  line-height: 107%;
   color: #292d33;
   margin: 1.5rem .5625rem;
 }
@@ -308,6 +338,7 @@ body {
   line-height: 160%;
   color: #292d33;
   margin: .625rem;
+  padding: 11px;
 }
 
 .steps-text {
@@ -330,10 +361,123 @@ body {
 
 .steps-link::before {
   content: "";
-  height: .0625rem;
+  height: 1px;
   background: #5c8ee6;
-  width: 2.5rem;
+  width: 40px;
   margin-right: 1.25rem;
+  transition: width 0.2s;
+}
+
+.steps-link:hover::before {
+  width: 60px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-decoration: none;
+  flex-basis: 33%;
+  border: 1px solid #ebebf0;
+  position: relative;
+  transition: border 0.2s;
+}
+
+.card:hover .card-title {
+  color: #5c8ee6;
+}
+
+.card:hover {
+  border-color: #5c8ee6;
+}
+
+.card-content {
+  padding: 2.5rem 3.125rem;
+}
+
+.card-title {
+  color: #292D33;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 140%;
+  margin-top: 0;
+  margin-bottom: .625rem;
+  transition: color 0.2s;
+  padding-top: 4px;
+}
+
+.card-text {
+  color: #828A99;
+  font-size: 1rem;
+  line-height: 160%;
+  margin-bottom: 394px;
+}
+
+.card-image {
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  position: absolute;
+}
+
+.stamps {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stamp {
+  display: flex;
+  text-decoration: none;
+  flex-basis: 50%;
+  border: 1px solid #ebebf0;
+  position: relative;
+  transition: border 0.2s;
+  padding: 42px;
+}
+
+.stamp:hover .stamp-title {
+  color: #5c8ee6;
+}
+
+.stamp:hover {
+  border-color: #5c8ee6;
+}
+
+.stamp-content {
+  padding: 1.5rem 3.125rem;
+}
+
+.stamp-title {
+  color: #292D33;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 140%;
+  margin-top: 19px;
+  margin-bottom: .625rem;
+  transition: color 0.2s;
+}
+
+.stamp-text {
+  color: #828A99;
+  font-size: 1rem;
+  line-height: 160%;
+  margin-bottom: 71px;
+}
+
+.stamp-icon {
+  width: 100%;
+  background-position: center;
+  padding-left: 18px;
+  fill: #828A99;
+  transition: fill 0.2s ease;
+  padding-bottom: 43px;
+}
+
+.stamp:hover .stamp-icon {
+  fill: #5c8ee6;
 }
 
 @media (max-width: 1700px) {
@@ -419,11 +563,21 @@ body {
     height: 40px;
     margin-left: auto;
   }
+
+  .card {
+    flex-basis: 46%;
+  }
+}
+
+@media (max-width: 1130px) {
+  .card {
+    flex-basis: 46%;
+  }
 }
 
 @media (max-width: 1080px) {
   .header-logo {
-    padding: 0.4rem;
+    padding: .4rem;
   }
 
   .header-nav {
@@ -579,6 +733,16 @@ body {
   .close-menu .mobile-menu-line:nth-child(3) {
     transform: rotate(-45deg) translateY(-10px);
   }
+
+  .card {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 882px) {
+  .card {
+    flex-basis: 55%;
+  }
 }
 
 @media (max-width: 769px) {
@@ -597,6 +761,10 @@ body {
   .header-content {
     padding-top: 3rem;
   }
+
+  .card {
+    flex-basis: 61%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -610,5 +778,9 @@ body {
 
   .header-content {
     padding-top: 3rem;
+  }
+
+  .card {
+    flex-basis: 96%;
   }
 }
