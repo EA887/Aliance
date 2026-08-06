@@ -544,7 +544,7 @@ body {
   }
 
   .navbar {
-    height: 5rem;
+    height: 6.8rem;
   }
 
   .navbar-button {
@@ -606,6 +606,18 @@ body {
   .header-logo {
     flex-grow: 1;
     justify-content: center;
+    border: none;
+  }
+
+  .logo-svg {
+    max-width: 15rem;
+    width: 13rem;
+    padding-right: 22px;
+  }
+
+  .navbar-button {
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
   }
 
   .mobile-menu-toggle {
@@ -614,7 +626,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.8rem;
+    padding: 2.9rem;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
   }
 
@@ -750,37 +762,167 @@ body {
     max-width: 50rem;
   }
 
+  .header-content {
+    padding-top: 3.0625rem;
+  }
+
   .header-image {
     background-position: center;
   }
 
-  .header-title {
-    font-size: 4rem;
-  }
-
-  .header-content {
-    padding-top: 3rem;
-  }
-
   .card {
     flex-basis: 61%;
+    top: 30px;
+  }
+
+  .card-title {
+    margin-top: 0px;
   }
 }
 
 @media (max-width: 576px) {
   .container {
     max-width: 90%;
+    margin-top: 53px;
+  }
+
+  .separator {
+    padding: -0.9375rem -0.4375rem;
+    margin-top: 132px;
   }
 
   .header-title {
-    font-size: 2rem;
+    font-size: 4.3rem;
+    letter-spacing: 0.0625rem;
+    word-spacing: 0.0063rem;
+    padding: 32px 0px;
+    line-height: 133%;
+    padding-bottom: 14px;
   }
 
-  .header-content {
-    padding-top: 3rem;
+  .header-text {
+    font-size: 14px;
+    padding-top: 1px;
+    padding-left: 0px;
+  }
+
+  .header-button {
+    font-size: 14px;
+    font-size: 14px;
+    padding: 31px 69px;
+  }
+
+  .header-features {
+    margin-top: 57px;
+  }
+
+  .header-features-item {
+    width: 250px;
+  }
+
+  .header-features-item {
+    margin-right: -99px;
+    padding-left: 30px;
+  }
+
+  .header-features-text {
+    font-size: 12px;
+    margin-bottom: 3px;
+    margin-top: .875rem;
+    margin-left: 2px;
+    letter-spacing: 1px;
+    word-spacing: 29px;
+    padding-top: 10px;
+  }
+
+  .slider-button-prev,
+  .slider-button-next {
+    padding-bottom: 10px;
+    padding-right: 26px;
+  }
+
+  .slider-button-next {
+    padding-right: 0;
+  }
+
+  .section {
+    margin-top: 95px;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    margin-left: 0;
+    font-size: 34px;
+    line-height: 133%;
+    margin-left: -4px;
+    margin-bottom: 5px;
+    margin-top: 19px;
+  }
+
+  .steps {
+    gap: 102px;
+  }
+
+  .steps-num {
+    margin: 9px 1px;
+    font-size: 41px;
+  }
+
+  .step-title {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .steps-text {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-left: -8px;
+  }
+
+  .steps-buttons {
+    width: 118px;
+    height: 56px;
+    padding-top: 0;
+    margin-bottom: -3px;
+    margin-top: 19px;
+  }
+
+  .card-image {
+    bottom: 0;
+    left: 0;
+  }
+
+  .card-text {
+    font-size: 12px;
+    margin-bottom: 250px;
   }
 
   .card {
     flex-basis: 96%;
+  }
+
+  .stamp {
+    flex-basis: 100%;
+    padding: 0;
+  }
+
+  .stamp-title {
+    font-size: 28px;
+  }
+
+  .stamp-icon {
+    padding-bottom: 113px;
+    position: relative;
+  }
+
+  .tamp-text {
+    font-size: 13px;
+    line-height: 105%;
+    bottom: -101px;
+    left: -77px;
+    margin: 0;
+    transform: scale(1, 1.3);
+    position: relative;
+    text-align: justify;
   }
 }
