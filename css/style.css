@@ -425,17 +425,46 @@ body {
 
 .stamps {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .stamp {
-  display: flex;
-  text-decoration: none;
   flex-basis: 50%;
+  text-decoration: none;
   border: 1px solid #ebebf0;
-  position: relative;
   transition: border 0.2s;
-  padding: 42px;
+  padding: 3.125rem;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto 2fr;
+  grid-column-gap: 50px;
+  grid-template-areas:
+    "logo title title"
+    "logo text text";
+}
+
+.stamp-icon {
+  width: 100%;
+  fill: #828a99;
+  grid-area: logo;
+}
+
+.stamp-title {
+  font-weight: 400;
+  margin: 0;
+  font-size: 28px;
+  line-height: 160%;
+  color: #292D33;
+  grid-area: title;
+}
+
+.stamp-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #828a99;
+  grid-area: text;
+  margin-top: 10px;
 }
 
 .stamp:hover .stamp-title {
@@ -444,36 +473,6 @@ body {
 
 .stamp:hover {
   border-color: #5c8ee6;
-}
-
-.stamp-content {
-  padding: 1.5rem 3.125rem;
-}
-
-.stamp-title {
-  color: #292D33;
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 140%;
-  margin-top: 19px;
-  margin-bottom: .625rem;
-  transition: color 0.2s;
-}
-
-.stamp-text {
-  color: #828A99;
-  font-size: 1rem;
-  line-height: 160%;
-  margin-bottom: 71px;
-}
-
-.stamp-icon {
-  width: 100%;
-  background-position: center;
-  padding-left: 18px;
-  fill: #828A99;
-  transition: fill 0.2s ease;
-  padding-bottom: 43px;
 }
 
 .stamp:hover .stamp-icon {
@@ -566,6 +565,10 @@ body {
 
   .card {
     flex-basis: 46%;
+  }
+
+  .stamp {
+    grid-template-columns: auto auto;
   }
 }
 
@@ -749,6 +752,10 @@ body {
   .card {
     flex-basis: 50%;
   }
+
+  .stamps {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 882px) {
@@ -902,27 +909,8 @@ body {
   }
 
   .stamp {
-    flex-basis: 100%;
-    padding: 0;
-  }
-
-  .stamp-title {
-    font-size: 28px;
-  }
-
-  .stamp-icon {
-    padding-bottom: 113px;
-    position: relative;
-  }
-
-  .stamp-text {
-    font-size: 13px;
-    line-height: 100%;
-    bottom: -39px;
-    left: -77px;
-    margin: 0;
-    transform: scale(1, 1.2);
-    position: relative;
-    text-align: justify;
+    grid-template-areas:
+      "logo title"
+      "text text";
   }
 }
