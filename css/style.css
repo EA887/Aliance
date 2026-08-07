@@ -550,17 +550,17 @@ body {
   align-items: center;
   justify-content: center;
   padding: 16px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 }
 
 .clients-logo {
   max-width: 100%;
   width: 70px;
   height: 70px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
 }
 
-.clients-logo:hover {
+.clients-logo-item:hover {
   filter: none;
   cursor: pointer;
 }
