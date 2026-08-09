@@ -731,7 +731,7 @@ body {
   }
 
   .founder-content {
-    max-width: 70rem;
+    max-width: 49rem;
   }
 
   .clients-content {
@@ -933,6 +933,11 @@ body {
   .card {
     flex-basis: 55%;
   }
+
+  .founder-content {
+    max-width: 42rem;
+    margin-top: -4px;
+  }
 }
 
 @media (max-width: 769px) {
@@ -961,6 +966,11 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 50px;
+  }
+
+  .founder-content {
+    max-width: 100%;
+    margin-top: -4px;
   }
 }
 
