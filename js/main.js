@@ -88,7 +88,7 @@ const stepsSlider = new Swiper('.steps-slider-wrapper .steps-slider', {
 
 const swiperBlog = new Swiper(".blog-slider", {
   speed: 400,
-  sliderPerView: 2,
+  slidesPerView: 2,
   spaceBetween: 30,
   navigation: {
     nextEl: '.blog-button-next',
