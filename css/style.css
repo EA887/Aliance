@@ -199,6 +199,49 @@ body {
   height: 100%;
 }
 
+.page-header {
+  padding-top: 9.375rem;
+  padding-bottom: 3.125rem;
+  color: #292D33;
+  position: relative;
+}
+
+.page-header-thumb {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  max-width: 30rem;
+}
+
+.page-header-bg-image {
+  background-color: url("../img/blog/blog-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+.page-header-bg-image::before {
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 45, 51, 0.6);
+}
+
+.page-header-bg-image .container {
+  position: relative;
+}
+
+.page-header-bg-grey {
+  background: #f0f2f5;
+}
+
+.page-header-title {}
+
 .separator {
   background: #5c8ee6;
   width: 9.375rem;

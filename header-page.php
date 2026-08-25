@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>О компании - Aliance Production</title>
+  <title><?= $page_title ?> - Aliance Production</title>
 </head>
 
 <body>
@@ -61,7 +61,7 @@
         г. Мосвка, Холодильный пер. 4к1с8
       </address>
     </div>
-    
+    <!-- /.mobile-info -->
     <div class="mobile-info">
       <svg class="mail" width="24" height="24">
         <use href="img/sprite.svg#mail"></use>
@@ -93,7 +93,7 @@
     </a>
     <ul class="header-nav">
       <li class="header-nav-item">
-        <a href="./about.php" class="header-nav-link">О компании</a>
+        <a href="/about.php" class="header-nav-link">О компании</a>
       </li>
       <li class="header-nav-item">
         <a href="/production.php" class="header-nav-link">Контрактное производство</a>
@@ -117,30 +117,28 @@
         +7 (499) 686-10-14
       </a>
     </div>
-    
-    <button class="navbar-button button" data-toggle="modal" data-target="#feedback-modal">
+    <!-- /.header-phone -->
+    <button class="navbar-button button" data-toggle="modal">
       <svg class="button-icon" width="24" height="24">
         <use href="img/sprite.svg#phone"></use>
       </svg>
       <span class="button-text">Получить консультацию</span>
     </button>
   </nav>
-  
-  <section class="section section-about">
-    <div class="container about-inner">
-      <div class="about-content">
-        <div class="separator"></div>
-        <h2 class="about-title">О компании</h2>
-        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <!-- /.navbar -->
+  <header class="page-header <?= $header_style;?>">
+    <div class="container">      
+      <div class="separator"></div>
+      <h1 class="production-title"><?= $page_title ?></h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
           <a href="./" class="breadcrumbs-link">Главная</a>
-          <span class="breadcrumbs-separator">—</span>
-          <span class="breadcrumbs-current">О компании</span>
-        </nav>
-      </div>
+        </li>
+        <li class="breadcrumbs-item active">
+          <a href="./" class="breadcrumbs-link"><?= $page_title ?></a>
+        </li>         
+        </ul>      
     </div>
-  </section> -->
-  <?php
-  $page_title = 'О компании';  
-  $header_style = 'page-header-bg-image';
-  include_once('header-page.php');?>
+  </header>
+
   <?php include_once('footer.php');?>
