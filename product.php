@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -61,7 +61,7 @@
         г. Мосвка, Холодильный пер. 4к1с8
       </address>
     </div>
-    <!-- /.mobile-info -->
+    
     <div class="mobile-info">
       <svg class="mail" width="24" height="24">
         <use href="img/sprite.svg#mail"></use>
@@ -117,7 +117,7 @@
         +7 (499) 686-10-14
       </a>
     </div>
-    <!-- /.header-phone -->
+    
     <button class="navbar-button button" data-toggle="modal">
       <svg class="button-icon" width="24" height="24">
         <use href="img/sprite.svg#phone"></use>
@@ -125,7 +125,7 @@
       <span class="button-text">Получить консультацию</span>
     </button>
   </nav>
-  <!-- /.navbar -->
+  
   <section class="section section-product">
     <div class="container product-inner">
       <div class="product-content">
@@ -140,5 +140,5 @@
     </div>
   </section>
 
-  <?php include_once('footer.php');?>
+  <?php include_once('footer.php');?> -->
   

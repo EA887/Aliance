@@ -240,7 +240,48 @@ body {
   background: #f0f2f5;
 }
 
-.page-header-title {}
+.page-header-title {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 120%;
+  color: inherit;
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.breadcrumbs-link {
+  color: #828a99;
+}
+
+.breadcrumbs-item.active .breadcrumbs-link {
+  color: #292d33;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "__";
+  margin-left: 10px;
+}
+
+.page-header-bg-image .breadcrumbs-link,
+.page-header-bg-image .breadcrumbs-item.active .breadcrumbs-link {
+  color: #fff;
+}
 
 .separator {
   background: #5c8ee6;
