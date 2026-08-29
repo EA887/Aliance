@@ -1,3 +1,7 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap");
+@import url("swiper-bundle.min.css");
+
 * {
   box-sizing: border-box;
 }
@@ -11,6 +15,7 @@ html {
   src: url('../fonts/BebasNeueBook.woff2') format('woff2'),
     url('../fonts/BebasNeueBook.woff') format('woff');
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
 }
 
@@ -80,8 +85,12 @@ body {
   padding-top: 5.875rem;
 }
 
-.header-image {
+.no-webp .header-image {
   background-image: url('../img/header-bg.jpg');
+}
+
+.header-image {
+  background-image: url('../img/header-bg.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: -0.4375rem -0.1875rem;
